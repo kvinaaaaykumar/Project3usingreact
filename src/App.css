@@ -1,0 +1,500 @@
+/* ================ GOOGLE FONT ================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ================ VARIEABLE ================ */
+:root {
+    --white: #fff;
+    --bg: linear-gradient(245.59deg, #4D9559 0%, #38703D 28.53%, #133917 75.52%);
+    --btn-1: #4D9559;
+    --btn-2: linear-gradient(270deg, #FBDB56 0%, #8D5503 100%), linear-gradient(180deg, #4D4F95 0%, #2B2D66 100%);
+
+    /* ================ FONT AND TYPOGRPHY ================ */
+    --body-font: "Poppins", sans-serif;
+
+    /* ----- weight ----- */
+    --extra-light: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    --extra-bold: 800;
+
+    /* ----- Z-Index ----- */
+    --z-first: 3;
+    --z-second: 2;
+    --z-third: 1;
+
+
+}
+
+/* ================ BASE ================ */
+
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+
+/* ================ NAV ================ */
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 144rem;
+    width: 100%;
+    padding: 1.5rem 6.25rem;
+    margin: 0 auto;
+    z-index: var(--z-first);
+}
+
+.logo a {
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    font-family: var(--body-font);
+    color: var(--white);
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 6rem;
+}
+
+.nav-item a {
+    font-size: 1.6rem;
+    font-weight: var(--regular);
+    font-family: var(--body-font);
+    color: var(--white);
+}
+
+.nav-item a:hover {
+    font-weight: var(--semi-bold);
+}
+
+.hamberger {
+    display: none;
+}
+
+@media screen and (max-width:850px) {
+    .navbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.5rem 2rem;
+        margin: 0 auto;
+        border-radius: 50px;
+        z-index: var(--z-first);
+
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        position: fixed;
+        background-color: var(--btn-1);
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: -50%;
+        padding: 3rem 0 0 3rem;
+        transition: all .3s ease;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+
+    .hamberger {
+        position: relative;
+        display: block;
+        font-size: 2rem;
+        color: var(--white);
+    }
+
+    .hamberger.times {
+        position: absolute;
+        z-index: var(--z-first);
+    }
+
+    .logo a {
+        font-size: 2rem;
+        font-weight: var(--semi-bold);
+    }
+
+
+}
+
+/* ================ HOME ================ */
+
+
+.home {
+    position: relative;
+    background: var(--bg);
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 7rem;
+    /* height: 100vh; */
+    overflow: hidden;
+
+
+}
+
+.home-site {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column-reverse;
+    padding: 0 2rem;
+
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ability {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    column-gap: 2rem;
+
+}
+
+.image {
+    height: 25rem;
+
+}
+
+img {
+    height: 20.4rem;
+    /* margin-top: 2rem; */
+}
+
+/* @keyframes img-move {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-2rem);
+        height: 21rem;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+} */
+
+.left-side,
+.right-side {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.speed-ability,
+.attack,
+.space,
+.btn-3 {
+    display: flex;
+    column-gap: 2rem;
+}
+
+span {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-family: var(--body-font);
+    font-weight: var(--regular);
+}
+
+.btn-3 {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.left-container {
+    margin-top: 3.5rem;
+}
+
+.first-container{
+    position: absolute;
+    top: 13%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.4rem;
+}
+
+.social-media i{
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.title {
+    font-size: 4rem;
+    font-family: var(--body-font);
+    font-weight: var(--semi-bold);
+    color: var(--white);
+}
+
+.heading {
+    font-size: 1.4rem;
+    color: var(--white);
+    font-family: var(--body-font);
+    font-weight: var(--regular);
+}
+
+.more-btn {
+    background: transparent;
+    color: var(--white);
+
+}
+
+.paragraph {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-family: var(--body-font);
+    font-weight: var(--light);
+    opacity: .6;
+    line-height: 160%;
+}
+
+.more-btn {
+    background: transparent;
+    color: var(--white);
+
+}
+
+.button {
+    margin-top: 3rem;
+    display: flex;
+    column-gap: 2.6rem;
+}
+
+.btn-1 {
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: var(--medium);
+    font-family: var(--body-font);
+    padding: 1.2rem 3.3rem;
+    background: var(--btn-1);
+    border-radius: .4rem;
+    transition: all .3s ease;
+}
+
+.btn-1:hover {
+    transform: scale(1.07);
+    text-decoration: none;
+}
+
+.btn-2 {
+    display: flex;
+    align-items: center;
+    column-gap: .8rem;
+    color: var(--white);
+
+}
+
+.play-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--btn-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 24px 48px rgba(0, 1, 44, 0.157184);
+    border: 2px solid #FBA856;
+}
+
+.play-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.btn-text {
+    font-weight: var(--light);
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    column-gap: 2rem;
+    margin-top: 8rem;
+    padding-bottom: 6rem;
+
+}
+
+.previous,
+.next {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: var(--medium);
+    font-family: var(--body-font);
+    text-transform: uppercase;
+}
+
+
+/* ================ Responsive ================ */
+
+
+@media screen and (max-width:320px) {
+    .image {
+        height: 20rem;
+    }
+
+    img {
+        height: 18rem;
+    }
+
+    span {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .home {
+        padding-top: 12rem;
+        
+    }
+
+    .home-site {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .first-container{
+        position: relative;
+    }
+    .left-container{
+        display: flex;
+        align-items: center;
+        column-gap: 3rem;
+    }
+
+    .right-container {
+        row-gap: 4rem;
+    }
+    .ability{
+        column-gap: 3rem;
+    }
+    .ability span{
+        font-size: 1.6rem;
+    }
+
+    .left-container {
+        margin-top: 0;
+
+    }
+    
+
+    .image {}
+
+    img {
+        height: 22rem;
+    }
+
+
+}
+
+@media screen and (min-width:851px) {
+    .home {
+        padding: 12rem  6.25rem 0 6.25rem;
+    }
+    .home-site{
+        padding: 0%;
+    }
+    .left-container{
+        column-gap: 5rem;
+    }
+    
+}
+
+@media screen and (min-width:1000px) {
+    .home {
+        padding-top: 14rem;
+    }
+    
+
+    /* .right-container {
+        row-gap: 4rem;
+    } */
+
+    img {
+        height: 25rem;
+    }
+    .ability{
+        column-gap: 6rem;
+    }
+
+    .title{
+        font-size: 5rem;
+    }
+    .heading{
+        margin-top: 1.6rem;
+        font-size: 2rem;
+    }
+
+    .paragraph{
+        width: 541px;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (min-width:1300px){
+    .left-container{
+        column-gap: 6rem;
+    }
+    .right-container {
+        row-gap: 15rem;
+    }
+    img {
+        height: 40rem;
+    }
+    .ability{
+        column-gap: 8rem;
+    }
+    
+}
